@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.2/css/bootstrap-select.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/0.8.2/css/flag-icon.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.2/js/bootstrap-select.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <style>
+		select#langAfter {
+			padding: 0.2em 0.5em 0.1em 1.5em;
+			background-color: #eee;
+			background-image: url('Images/theme/v1/img/flag/indonesia.png');
+			background-repeat: no-repeat;
+			background-size: 0.8em auto;
+			background-position: 0.4em center;
+			font-size: 1.3em;
+			color: #000;
+		}
+    </style>
+</head>
+<body style="overflow:hidden; background:transparent">
+    <select name="langAfter" id="langAfter" runat="server" onchange="top.location.href = this.form.langAfter.options[this.form.langAfter.selectedIndex].value; return false;">
+        <option value="Main.aspx?lang=EN-US">English</option>
+        <option value="Main.aspx?lang=ZH-CN">中文</option>
+        <option value="Main.aspx?lang=TH-TH">ภาษาไทย</option>
+        <option value="Main.aspx?lang=EN-IE">Tiếng Việt</option>
+        <option value="Main.aspx?lang=EN-TT">KOREAN</option>
+    </select>
+    <select class="selectpicker" data-width="fit">
+        <option data-content='<span class="flag-icon flag-icon-us"></span> English'>English</option>
+        <option data-content='<span class="flag-icon flag-icon-cn"></span> 中文'>中文</option>
+        <option data-content='<span class="flag-icon flag-icon-th"></span> ภาษาไทย'>ภาษาไทย</option>
+        <option data-content='<span class="flag-icon flag-icon-vn"></span> Tiếng Việt'>Tiếng Việt</option>
+        <option data-content='<span class="flag-icon flag-icon-kr"></span> KOREAN'>KOREAN</option>
+    </select>
+
+    <select id="countrySelect" name="ipicked__bahasa" class="selectpicker" data-show-content="true" onChange="go__bahasa()">
+        <option value="Main.aspx?lang=EN-US" data-content='<span class="flag-icon flag-icon-us"></span> English'>English</option>
+        <option value="Main.aspx?lang=ZH-CN" data-content='<span class="flag-icon flag-icon-cn"></span> 中文'>中文</option>
+        <option value="Main.aspx?lang=TH-TH" data-content='<span class="flag-icon flag-icon-th"></span> ภาษาไทย'>ภาษาไทย</option>
+        <option value="Main.aspx?lang=EN-IE" data-content='<span class="flag-icon flag-icon-vn"></span> Tiếng Việt'>Tiếng Việt</option>
+        <option value="Main.aspx?lang=EN-TT" data-content='<span class="flag-icon flag-icon-kr"></span> KOREAN'>KOREAN</option>
+    </select>
+    <input onClick="go__bahasa()" type="button" name="gobahasa" value="Go!" style="display: none">
+    <script type="text/javascript">
+        $(function () {
+            $('.selectpicker').selectpicker();
+            $('pick__lang').selectpicker();
+        });
+        function go__bahasa() {
+            location = document.pilih__bahasa.ipicked__bahasa.
+                options[document.pilih__bahasa.ipicked__bahasa.selectedIndex].value
+        }
+    </script>
+    <h1>Iframe 1</h1>
+</body>
+</html>
