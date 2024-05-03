@@ -1,4 +1,4 @@
-# LIGA-KITs
+# CLG-KITs
 
 ## New layout Main page (Frameset, Frame -> Iframe) and Language Dropdownlist with icons
   
